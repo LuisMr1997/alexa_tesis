@@ -1,0 +1,111 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "option",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.787822597077.1264626497393"
+              }
+            }
+          ],
+          "name": "CustomOptionInitial",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "lenguage",
+              "elicitationRequired": true,
+              "type": "AMAZON.StreetName",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.710696916554.1201339192829"
+              }
+            }
+          ],
+          "name": "CustomMoreLenguageProgramation",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "option",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "name": "CustomOptionInitial",
+          "samples": [
+            "sobre {option}",
+            "unibe que sabes sobre {option}",
+            "unibe que son {option}",
+            "unibe hablame sobre los {option}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "lenguage",
+              "type": "AMAZON.StreetName"
+            }
+          ],
+          "name": "CustomMoreLenguageProgramation",
+          "samples": [
+            "sobre {lenguage}",
+            "hablame sobre {lenguage}"
+          ]
+        }
+      ],
+      "types": [],
+      "invocationName": "algoritmos y logica de programacion unibe"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Recuerda puedes elegir entre lenguajes de programación, elementos básicos de un programa, sistemas de información, ciclo de vida de una aplicación, informática o tipos de documentación"
+          }
+        ],
+        "id": "Elicit.Slot.787822597077.1264626497393"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Recuerda puedes elegir entre los siguientes de lenguajes de programación. JavaScript y TypeScript, Python y Punto net"
+          }
+        ],
+        "id": "Elicit.Slot.710696916554.1201339192829"
+      }
+    ]
+  }
+}
